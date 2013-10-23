@@ -66,13 +66,14 @@ if(nrow(dsum)==12){
 wl = t(dsum[,2:ncol(dsum)])
 wl = wl[c(4,3,2),]
 
-dsum = aggregate(TMIN~mnth, data = data,FUN = "min")
+dsum = aggregate(TMIN~mnth, data = adata,FUN = "min")
 wl = rbind(wl, t(dsum[,2]))
 
 slat = 1
 if(!is.na(latd)) slat = sign(latd)
 
-diagwl(wl, est = locl, alt = elev, mlab="en", per = perd, shem = slat)
+#diagwl(wl, est = locl, alt = elev, mlab="en", per = perd, shem = slat)
+diagwl(wl, est = locl, alt = elev, mlab="en", per = perd)
 if(!is.na(latd)){
   latlon = paste("LAT",latd, "/ LON", lond)
   mtext(latlon,3,-1, cex = 0.8) 
