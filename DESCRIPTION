@@ -1,0 +1,19 @@
+Package: climclass
+Type: Package
+Title: Tools for climate classification
+Version: 0.0.1
+Date: 2013-10-23
+Author: Reinhard Simon
+Maintainer: "Simon, Reinhard (CIP)" <R.SIMON@CGIAR.ORG>
+Description: Tools for climate classification
+License: GPL (>=3)
+LazyData: yes
+Suggests:
+    knitr
+VignetteBuilder: knitr
+Depends:
+    R (>= 3.0.0),
+    stringr,
+    climatol
+Collate:
+    'climclass.R'
